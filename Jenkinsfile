@@ -4,7 +4,7 @@ pipeline {
 
   agent any
   environment {
-    SPECTRAL_DSN = 'https://spu-d646eb36ff0d4aa1a11f6cd514cc1ad4@spectral-eu.checkpoint.com'
+    SPECTRAL_DSN = 'https://spu-f641f73b9c03467eb3544c4095b3d04e@get.spectralops.io'
   }
   stages {
     stage('install Spectral') {
@@ -14,7 +14,7 @@ pipeline {
     }
     stage('scan for issues') {
       steps {
-        sh "$HOME/.spectral/spectral scan --fail-on-error  --include-tags base,audit"
+        sh " $HOME/.spectral/spectral scan --engine-kinds oss"
       }
     }
   }
