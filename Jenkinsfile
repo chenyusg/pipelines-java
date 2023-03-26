@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('install Spectral') {
       steps {
-        sh "curl -L 'https://spectral-eu.checkpoint.com/latest/x/sh?dsn=$SPECTRAL_DSN' | sh"
+        sh "curl -L 'https://get.spectralops.io/latest/x/sh?key=spu-f641f73b9c03467eb3544c4095b3d04e' | sh"
       }
     }
     stage('scan for issues') {
